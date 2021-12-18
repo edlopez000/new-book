@@ -1,13 +1,13 @@
 import React from 'react';
-import { InputGroup, InputRightElement, Input, Box } from '@chakra-ui/react';
+import { InputGroup, InputRightElement, Input } from '@chakra-ui/react';
+import { SearchIcon } from '@chakra-ui/icons';
 
 const TextInput = ({ insideText }) => {
   return (
-    <Box>
-      <InputGroup>
-        <Input placeholder={insideText} />
-      </InputGroup>
-    </Box>
+    <InputGroup>
+      <Input placeholder={insideText} variant="filled" />
+      <InputRightElement children={<SearchIcon />} pointerEvents="none" />
+    </InputGroup>
   );
 };
 
