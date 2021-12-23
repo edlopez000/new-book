@@ -6,6 +6,7 @@ export default {
   component: Logo,
 };
 
-const Template = () => <Logo />;
+const Template = (args) => <Logo {...args} />;
 
 export const Basic = Template.bind({});
+Basic.args = { color: 'white', fontWeight: 'bold' };
